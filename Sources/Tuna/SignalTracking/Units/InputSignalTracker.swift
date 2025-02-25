@@ -87,7 +87,7 @@ class InputSignalTracker: SignalTracker {
 
         try audioEngine?.start()
         DispatchQueue.global(qos: .userInitiated).async {
-            captureSession.startRunning()
+            self.captureSession.startRunning()
         }
 
         guard captureSession.isRunning == true else {
